@@ -71,6 +71,10 @@ Rules for writing CSS
     height: 49px;
 }
 
+/* #top-bar > div{
+    line-height: attr(height);
+} */
+
 .indicator::before {
     border: 2px solid var(--bs-light);
     animation: indicator 2s ease infinite;
