@@ -1,0 +1,155 @@
+/* 
+Rules for writing CSS
+1- Donot use camelCase or PascalCase
+2- Use following naming converntion :
+
+.elem-name
+#elem-name
+
+3- Avoid !important but use it when replacing bootstrap value
+
+*/
+
+
+* {
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* //////////// */
+/* Normal LAYOUT */
+/* //////////// */
+
+#body-wrapper[data-layout='normal'] {
+    min-height: 100vh;
+    overflow: hidden auto;
+}
+
+/* //////////// */
+/* FIXED LAYOUT */
+/* //////////// */
+#body-wrapper[data-layout='fixed'] {
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+#body-wrapper[data-layout='fixed'] #lb-items {
+    overflow: visible auto;
+}
+
+/* //////////// */
+/* Left bar */
+/* //////////// */
+#left-bar {
+    /* z-index: 5; */
+    /* box-shadow: 7px 0px 20px -12px black; */
+    height: auto;
+}
+
+#left-bar-in {
+    will-change: width;
+    width: 250px;
+}
+
+#lb-items>div {
+    color: var(--bs-light) !important;
+}
+
+#lb-brand {
+    font-size: 1.7rem;
+}
+
+.lb-item-icon {
+    font-size: 1.1rem;
+}
+
+/* //////////// */
+/* Top bar */
+/* //////////// */
+#top-bar {
+    /* z-index: 10; */
+    height: 49px;
+}
+
+.indicator::before {
+    border: 2px solid var(--bs-light);
+    animation: indicator 2s ease infinite;
+}
+
+.indicator::after {
+    background-color: var(--bs-warning);
+}
+
+.indicator::before,
+.indicator::after {
+    content: '';
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    width: 7px;
+    height: 7px;
+    bottom: 100%;
+    left: 100%;
+    position: absolute;
+    transition: transform 0.5s;
+}
+
+
+
+/* //////////// */
+/* Utilities */
+/* //////////// */
+.bg-dark-n1 {
+    background-color: #30363c !important;
+}
+
+.bg-dark-n2 {
+    background-color: #3c434b !important;
+}
+
+.border-dark-n2 {
+    border-color: #3c434b !important;
+}
+
+.w-80 {
+    width: 80% !important;
+}
+
+.w-20 {
+    width: 20% !important;
+}
+
+
+/* //////////// */
+/* Animations */
+/* //////////// */
+/* using indicator in top bar items */
+@keyframes indicator { 
+    0% {
+        transform: translate(-50%,-50%) scale(1, 1);
+        opacity: 1;
+    }
+
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%,-50%) scale(3, 3);
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
