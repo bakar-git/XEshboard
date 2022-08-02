@@ -70,10 +70,20 @@ Rules for writing CSS
     /* z-index: 10; */
     height: 49px;
 }
+.tb-item:focus, .tb-item:focus-within{
+    background-color: var(--bs-primary)!important;
+    color: var(--bs-white)!important;
+}
+.tb-dropdown-menu a{
+    text-decoration: none;
+}
 
-/* #top-bar > div{
-    line-height: attr(height);
-} */
+.tb-item .tb-dropdown-menu{
+    display: none;
+}
+.tb-item:focus .tb-dropdown-menu, .tb-dropdown-menu:hover, .tb-dropdown-menu:focus, .tb-dropdown-menu:focus-within{
+    display: block;
+}
 
 .indicator::before {
     border: 2px solid var(--bs-light);
@@ -121,8 +131,20 @@ Rules for writing CSS
 .w-20 {
     width: 20% !important;
 }
-
-
+.text-overflow-ellipsis{
+    text-overflow: ellipsis;
+}
+.to-primary,.to-light-1{
+    background-color: transparent;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.to-primary:hover{
+    background-color: var(--bs-primary)!important;
+    color: var(--bs-white)!important;
+}
+.to-light-1:hover, .bg-light-1{
+    background-color: #ecf0f3!important;
+}
 /* //////////// */
 /* Animations */
 /* //////////// */
