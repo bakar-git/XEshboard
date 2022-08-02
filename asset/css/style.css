@@ -188,6 +188,9 @@ Rules for writing CSS
     #left-bar[data-display='close'] > div:nth-child(1) {
         display: none;
     }
+    #lb-config-panel{
+        display: none!important;
+    }
 }
 
 
@@ -266,6 +269,15 @@ Rules for writing CSS
 
 
 
+
+
+
+
+
+
+
+
+
 /* //////////// */
 /* Utilities */
 /* //////////// */
@@ -280,6 +292,23 @@ Rules for writing CSS
 .border-dark-n2 {
     border-color: #3c434b !important;
 }
+
+.l-bg-danger {
+    background: linear-gradient(to right, #493240, #f09) !important;
+}
+
+.l-bg-info {
+    background: linear-gradient(to right, #373b44, #4286f4) !important;
+}
+
+.l-bg-success {
+    background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+}
+
+.l-bg-warning {
+    background: linear-gradient(to right, #a86008, #ffba56) !important;
+}
+
 
 .w-80 {
     width: 80% !important;
@@ -301,6 +330,9 @@ Rules for writing CSS
 }
 .to-light-1:hover, .bg-light-1{
     background-color: #ecf0f3!important;
+}
+.text-light-transparent{
+    color: #ffffff33;
 }
 /* //////////// */
 /* Animations */
