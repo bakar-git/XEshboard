@@ -46,10 +46,17 @@ Rules for writing CSS
     height: auto;
 }
 
+#left-bar>div:nth-child(1) {
+    background: #00000044;
+    z-index: 20;
+}
+
 #left-bar-in {
+    background: inherit;
     will-change: width;
     width: 16rem;
     transition: width 250ms, opacity 250ms;
+    z-index: 30;
 }
 
 #lb-brand {
@@ -164,25 +171,41 @@ Rules for writing CSS
     overflow: hidden;
 }
 
+/* ///////////////////// */
+/* left bar media queries */
+/* ///////////////////// */
+@media (any-hover: hover), (any-pointer: fine){
+    #left-bar > div:nth-child(1) {
+        display: none;
+    }
+}
+
+
+@media (any-hover: none), (any-pointer: none) {
+    #left-bar[data-display='normal'] > div:nth-child(1) {
+        display: block;
+    }
+    #left-bar[data-display='close'] > div:nth-child(1) {
+        display: none;
+    }
+}
+
+
+
+
 /* //////////// */
 /* Top bar */
 /* //////////// */
 #top-bar {
     height: 3rem;
 }
-.tb-item:focus, .tb-item:focus-within{
-    background-color: var(--bs-primary)!important;
-    color: var(--bs-white)!important;
-}
+
 .tb-dropdown-menu a{
     text-decoration: none;
 }
 
 .tb-item .tb-dropdown-menu{
     display: none;
-}
-.tb-item:focus .tb-dropdown-menu, .tb-dropdown-menu:hover, .tb-dropdown-menu:focus, .tb-dropdown-menu:focus-within{
-    display: block;
 }
 
 .indicator::before {
@@ -206,6 +229,40 @@ Rules for writing CSS
     position: absolute;
     transition: transform 0.5s;
 }
+
+/* ///////////////////// */
+/* top bar interactions */
+/* ///////////////////// */
+.tb-item:focus, .tb-item:focus-within{
+    background-color: var(--bs-primary)!important;
+    color: var(--bs-white)!important;
+}
+
+.tb-item:focus .tb-dropdown-menu, .tb-dropdown-menu:hover, .tb-dropdown-menu:focus, .tb-dropdown-menu:focus-within{
+    display: block;
+}
+
+/* ///////////////////// */
+/* top bar media queries */
+/* ///////////////////// */
+
+@media (any-hover: hover), (any-pointer: fine) {
+    .tb-dropdown-menu{
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+}
+
+@media (any-hover: none), (any-pointer: none) {
+    .tb-dropdown-menu{
+        position: fixed;
+        top: 3rem;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
 
 
 

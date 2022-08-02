@@ -23,7 +23,12 @@
             overlay : false, true
             interaction : normal, mouse-over
          -->
+         <!-- 
+            Avoid display change when interaction : mouse
+          -->
         <section id="left-bar" class="bg-dark-n1 start-0" data-display="normal" data-overlay="false" data-interaction="normal">
+            <!-- following div is necessary for mobile -->
+            <div class="w-100 h-100 position-fixed"></div>
             <div id="left-bar-in" class="d-flex flex-column h-100 position-relative">
                 <!-- Branding -->
                 <div id="lb-brand" class="py-1 bg-dark-n2 text-center text-white fw-bold m-0"></div>
@@ -94,7 +99,7 @@
             <!-- TOP BAR START -->
             <section id="top-bar" class="bg-dark-n2 w-100 d-flex text-white">
                 <!-- Left Bar Close Toggle -->
-                <div onclick="toggleLayout()" class="btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white">
+                <div onclick="lb_display_toggle()" class="btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white tb-item">
                     <i class="fas fa-bars fa-lg"></i>
                 </div>
                 <!-- Message Dropdown -->
@@ -104,7 +109,7 @@
                         <span class="indicator"></span>
                     </i>
                     <!-- dropdown menu -->
-                    <div class="position-absolute top-100 end-0 text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 19rem;">
+                    <div class="text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 19rem;">
                         <!-- header -->
                         <div class="py-2 bg-light-1 text-secondary">
                             <span>You hav 10 new messages</span>
@@ -178,7 +183,7 @@
                         <span class="indicator"></span>
                     </i>
                     <!-- dropdown menu -->
-                    <div class="position-absolute top-100 end-0 text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 19rem;">
+                    <div class="text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 19rem;">
                         <!-- header -->
                         <div class="py-2 bg-light-1 text-secondary">
                             <span>You hav 5 new notifications</span>
@@ -223,7 +228,7 @@
                         <span class="indicator"></span>
                     </i>
                     <!-- dropdown menu -->
-                    <div class="position-absolute top-100 end-0 text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 19rem;">
+                    <div class="text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 19rem;">
                         <!-- header -->
                         <div class="py-2 bg-light-1 text-secondary">
                             <span>You have 3 tasks</span>
@@ -272,7 +277,7 @@
                     <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle img-fluid h-100 border border-light border-2">
                     <span class="ms-1">Valeria Dokanovic</span>
                     <!-- dropdown menu -->
-                    <div class="position-absolute top-100 end-0 text-center text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu"
+                    <div class="text-center text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu"
                         style="width: 17rem;">
                         <div class="d-flex flex-column">
                             <img src="https://randomuser.me/api/portraits/men/12.jpg" width="100px" height="100px"
