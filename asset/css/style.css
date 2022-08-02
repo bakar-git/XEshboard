@@ -7,6 +7,7 @@ Rules for writing CSS
 #elem-name
 
 3- Avoid !important but use it when replacing bootstrap value
+4- Use rem instead of px
 
 */
 
@@ -48,16 +49,20 @@ Rules for writing CSS
 #left-bar-in {
     will-change: width;
     width: 16rem;
+    transition: width 250ms, opacity 250ms;
 }
 
 #lb-brand {
     font-size: 1.7rem;
 }
+/* temporary strt */
+#lb-brand::before{
+    content: 'XEshboard';
+}
+/* temporary end */
 
 #lb-items > div, #lb-bottom-icons{
     flex-direction: row;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 }
 
 #lb-bottom-icons > button{
@@ -85,11 +90,40 @@ Rules for writing CSS
 #left-bar[data-display='compact'] #left-bar-in{
     width: 3.2rem;
 }
-
+/* temporary strt */
+#left-bar[data-display='compact'] #lb-brand::before{
+    content: 'XE';
+}
+/* temporary end */
 #left-bar[data-display='compact'] #lb-items > div,
 #left-bar[data-display='compact'] #lb-bottom-icons{
     flex-direction: column;
 }
+
+#left-bar[data-display='compact'] #lb-items > div{
+    margin-left: 0.25rem!important;
+    margin-right: 0.25rem!important;
+}
+/* #left-bar[data-display='compact'] #lb-items > div{
+    margin-left: 0rem!important;
+    margin-right: 0rem!important;
+    padding-top: 0.6rem!important;
+    padding-bottom: 0.6rem!important;
+    border-radius: 0;
+    position: relative;
+} */
+/* #left-bar[data-display='compact'] #lb-items > div:hover .name{
+    position: absolute;
+    background: inherit;
+    display: block!important;
+    height: 100%;
+    top: 0;
+    left: 80%;
+    width: 12.8rem;
+    border-radius: 0px 10px 10px 0px;
+    opacity: 0;
+    animation: fx_show 200ms linear 1 forwards;
+} */
 
 #left-bar[data-display='compact'] #lb-items > div > .name,
 #left-bar[data-display='compact'] #lb-items > div > .badge,
@@ -98,8 +132,8 @@ Rules for writing CSS
 }
 
 #left-bar[data-display='compact'] #lb-bottom-icons{
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+    padding-left: 0.25rem!important;
+    padding-right: 0.25rem!important;
 }
 #left-bar[data-display='compact'] #lb-bottom-icons > button{
     box-shadow: none;
@@ -107,6 +141,27 @@ Rules for writing CSS
 
 #left-bar[data-display='compact'] #left-bar-in > #lb-config-panel{
     left: 3.2rem;
+}
+
+/* close left bar */
+
+#left-bar[data-display='close'] #left-bar-in{
+    width: 0rem;
+    overflow: hidden;
+}
+
+/* overlay true -> left bar  */
+
+#left-bar[data-overlay='true']{
+    position: absolute;
+    height: 100%;
+}
+
+/* interaction mouse -> left bar */
+#left-bar[data-interaction='mouse'] #left-bar-in:not(:hover){
+    width: 2px;
+    opacity: 0;
+    overflow: hidden;
 }
 
 /* //////////// */
