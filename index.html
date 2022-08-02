@@ -15,8 +15,8 @@
 <body>
     <div class="d-flex" id="body-wrapper" data-layout="normal">
         <!-- LEFT BAR START -->
-        <section id="left-bar" class="bg-dark-n1">
-            <div id="left-bar-in" class="d-flex flex-column h-100">
+        <section id="left-bar" class="bg-dark-n1" data-display="compact">
+            <div id="left-bar-in" class="d-flex flex-column h-100 position-relative">
                 <!-- Branding -->
                 <div id="lb-brand" class="py-1 bg-dark-n2 text-center text-white fw-bold m-0">
                     <span>XEshboard</span>
@@ -38,33 +38,46 @@
                 <!-- Left Bar Items -->
                 <div id="lb-items">
                     <!-- Simple Element (active) -->
-                    <div class="d-flex">
-                        <span
-                            class="active btn btn-outline-primary d-flex align-items-center w-100 mx-2 my-1 py-2 text-white border-0 text-start">
-                            <i class="fas fa-tachometer-alt lb-item-icon"></i>
-                            <span class="name ms-2">Dashboard</span>
-                        </span>
+                    <div class="active btn btn-outline-primary d-flex align-items-center mx-2 my-1 py-2 text-white border-0">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span class="name ms-2">Dashboard</span>
                     </div>
-
-                    <!-- Simple Element (active) -->
-                    <div class="d-flex">
-                        <span
-                            class="btn btn-outline-primary d-flex align-items-center w-100 mx-2 my-1 py-2 text-white border-0 text-start">
-                            <i class="fas fa-user lb-item-icon"></i>
-                            <span class="name ms-2">User</span>
-                        </span>
+                    <!-- Simple Element -->
+                    <div class="btn btn-outline-primary d-flex align-items-center mx-2 my-1 py-2 text-white border-0">
+                        <i class="fas fa-user"></i>
+                        <span class="name ms-2">User</span>
                     </div>
                     <!-- Simple Element (with badge) -->
-                    <div class="d-flex">
-                        <span
-                            class="btn btn-outline-primary d-flex align-items-center w-100 mx-2 my-1 py-2 text-white border-0 text-start">
-                            <i class="fas fa-cart-shopping lb-item-icon"></i>
-                            <span class="name ms-2">Product</span>
-                            <span class="badge bg-danger ms-auto">100</span>
-                        </span>
+                    <div class="btn btn-outline-primary d-flex align-items-center mx-2 my-1 py-2 text-white border-0">
+                        <i class="fas fa-cart-shopping"></i>
+                        <span class="name ms-2">Product</span>
+                        <span class="badge bg-danger ms-auto">100</span>
                     </div>
                     
                 </div>
+                <!-- Left Bar bottom panel -->
+                <div id="lb-bottom-icons" class="d-flex justify-content-between mt-auto border-top border-dark-n2 ">
+                    <button class="btn btn-outline-info px-3 my-2 text-white border-0"><i class="fas fa-gear fa-sm"></i></button>
+                    <button class="btn btn-outline-success px-3 my-2 text-white border-0"><i class="fas fa-expand fa-sm"></i></button>
+                    <button class="btn btn-outline-warning px-3 my-2 text-white border-0"><i class="fas fa-lock fa-sm"></i></button>
+                    <button class="btn btn-outline-danger px-3 my-2 text-white border-0"><i class="fas fa-sign-out fa-sm"></i></button>
+                </div>
+                <!-- Left bar setting panel (small panel) -->
+                <div id="lb-config-panel" class="position-absolute top-50 translate-middle-y">
+                    <div class="px-1 btn-primary position-relative">
+                        <i class="fas fa-thumb-tack fa-2xs"></i>
+                        <i class="fas fa-slash fa-sm position-absolute top-50 start-50 translate-middle text-light"></i>
+                    </div>
+                    <div class="px-1 btn-primary position-relative">
+                        <i class="fas fa-arrow-alt-circle-left fa-2xs"></i>
+                        <i class="fas fa-slash fa-sm position-absolute top-50 start-50 translate-middle text-light"></i>
+                    </div>
+                    <div class="px-1 btn-primary position-relative">
+                        <i class="fas fa-mouse fa-2xs"></i>
+                        <i class="fas fa-slash fa-sm position-absolute top-50 start-50 translate-middle text-light"></i>
+                    </div>
+                </div>
+
 
             </div>
         </section>
@@ -75,7 +88,7 @@
             <!-- TOP BAR START -->
             <section id="top-bar" class="bg-dark-n2 w-100 d-flex text-white">
                 <!-- Left Bar Close Toggle -->
-                <div class="btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white">
+                <div onclick="toggleLayout()" class="btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white">
                     <i class="fas fa-bars fa-lg"></i>
                 </div>
                 <!-- Message Dropdown -->
@@ -290,6 +303,8 @@
 
         </section>
         <!-- MIDDLE SECTION START -->
+        <!-- RIGHT BAR STARTED -->
+        <!-- RIGHT BAR END -->
     </div>
 
 
@@ -299,6 +314,22 @@
     <script src="asset/js/main.js"></script>
 
 
+
+    <script src="asset/lib/tinymce6/tinymce.min.js"></script>
+    <!-- <script src="https://cdn.tiny.cloud/1/n21j8x7iwpn5q7ps6tju4ojlc97a7gb4xjy84yk6ioe0qpeq/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> -->
+    
+    <!-- <script>
+        tinymce.init({
+          selector: 'textarea',
+          plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+          toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+          toolbar_mode: 'floating',
+          tinycomments_mode: 'embedded',
+          tinycomments_author: 'Author name',
+        });
+      </script> -->
+
+      
     <!-- Adding icons and fonts at end -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="asset/lib/fa6/css/all.min.css">
