@@ -39,6 +39,14 @@ Rules for writing CSS
     overflow: visible auto;
 }
 
+#body-wrapper[data-layout='fixed'] #content{
+    overflow: hidden;
+}
+#body-wrapper[data-layout='fixed'] #content-in{
+    height: 100%;
+    overflow: auto;
+}
+
 /* //////////// */
 /* Left bar */
 /* //////////// */
@@ -68,7 +76,7 @@ Rules for writing CSS
 }
 /* temporary end */
 
-#lb-items > div, #lb-bottom-icons{
+#lb-items > .lb-item, #lb-bottom-icons{
     flex-direction: row;
 }
 
@@ -102,16 +110,16 @@ Rules for writing CSS
     content: 'XE';
 }
 /* temporary end */
-#left-bar[data-display='compact'] #lb-items > div,
+#left-bar[data-display='compact'] #lb-items > .lb-item,
 #left-bar[data-display='compact'] #lb-bottom-icons{
     flex-direction: column;
 }
 
-#left-bar[data-display='compact'] #lb-items > div{
+#left-bar[data-display='compact'] #lb-items > .lb-item{
     margin-left: 0.25rem!important;
     margin-right: 0.25rem!important;
 }
-/* #left-bar[data-display='compact'] #lb-items > div{
+/* #left-bar[data-display='compact'] #lb-items > .lb-item{
     margin-left: 0rem!important;
     margin-right: 0rem!important;
     padding-top: 0.6rem!important;
@@ -119,7 +127,7 @@ Rules for writing CSS
     border-radius: 0;
     position: relative;
 } */
-/* #left-bar[data-display='compact'] #lb-items > div:hover .name{
+/* #left-bar[data-display='compact'] #lb-items > .lb-item:hover .name{
     position: absolute;
     background: inherit;
     display: block!important;
@@ -132,8 +140,8 @@ Rules for writing CSS
     animation: fx_show 200ms linear 1 forwards;
 } */
 
-#left-bar[data-display='compact'] #lb-items > div > .name,
-#left-bar[data-display='compact'] #lb-items > div > .badge,
+#left-bar[data-display='compact'] #lb-items > .lb-item > .name,
+#left-bar[data-display='compact'] #lb-items > .lb-item > .badge,
 #left-bar[data-display='compact'] #lb-search-bar{
     display: none!important;
 }
@@ -201,6 +209,7 @@ Rules for writing CSS
 /* //////////// */
 #top-bar {
     height: 3rem;
+    z-index: 10;
 }
 
 .tb-dropdown-menu a{
@@ -271,9 +280,61 @@ Rules for writing CSS
 
 
 
+/* //////////// */
+/* Mid section */
+/* //////////// */
+
+/* product add page */
+.c-form-select{
+    padding-left: 2px!important;
+    padding-right: 30px!important;
+    max-width: 97px;
+}
+#product-brand .nav-item > a{
+    color: var(--bs-gray);
+}
+#product-brand .nav-item > a.active{
+    background-color: var(--bs-light);
+}
 
 
+  .rating_star {
+    display: flex;
+    flex-direction: row;
+    transform: rotateY(180deg);
+    margin: 0 auto;
+  }
 
+  .rating_star input {
+    width: 20%;
+    display: flex;
+    height: 20px;
+    position: relative;
+    visibility: hidden;
+  }
+
+  .rating_star input::before {
+    left: 0px;
+    top: 0px;
+    color: var(--bs-gray);
+    font-size: 25px;
+    display: flex;
+    visibility: visible;
+    content: "\2605";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rating_star input:hover::before,
+  .rating_star input:hover~input::before,
+  .rating_star input:checked:before,
+  .rating_star input:checked~input::before {
+    content: "\2605";
+    color: var(--bs-primary);
+  }
 
 
 
@@ -288,7 +349,10 @@ Rules for writing CSS
 .bg-dark-n2 {
     background-color: #3c434b !important;
 }
+.bg-inherit {
+    background-color: inherit!important;
 
+}
 .border-dark-n2 {
     border-color: #3c434b !important;
 }
@@ -318,7 +382,7 @@ Rules for writing CSS
     width: 20% !important;
 }
 .text-overflow-ellipsis{
-    text-overflow: ellipsis;
+    text-overflow: ellipsis!important;
 }
 .to-primary,.to-light-1{
     background-color: transparent;
@@ -332,7 +396,19 @@ Rules for writing CSS
     background-color: #ecf0f3!important;
 }
 .text-light-transparent{
-    color: #ffffff33;
+    color: #ffffff33!important;
+}
+.text-dark-n2{
+    color: #3c434b!important;
+}
+.h7, .fs-7{
+    font-size: 0.9rem!important;
+}
+.h8, .fs-8{
+    font-size: 0.8rem!important;
+}
+.h9, .fs-9{
+    font-size: 0.7rem!important;
 }
 /* //////////// */
 /* Animations */
