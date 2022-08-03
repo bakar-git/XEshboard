@@ -349,7 +349,7 @@
             <!-- CONTENT START -->
             <section id="content" class="bg-light-1 h-100 position-relative">
                 <!-- Scroll Spy -->
-                <nav id="product-page-scrollSpy" class="navbar navbar-light bg-light shadow w-100 px-2" style="z-index: 5;">
+                <nav id="product-page-scrollSpy" class="navbar navbar-light bg-light shadow w-100 px-2 position-absolute top-0" style="z-index: 5;">
                     <ul class="nav nav-pills">
                         <li class="nav-item">
                             <a class="nav-link" href="#product-basicInfo">Basic Info</a>
@@ -380,9 +380,9 @@
                                     <span class="input-group-text text-info"><i class="fas fa-pencil"></i></span>
                                     <input type="text" class="form-control" placeholder="Product Title">
                                 </div>
-                                <!-- size and weight -->
                                 <div class="row my-2">
-                                    <div class="col-lg col-12">
+                                    <!-- size -->
+                                    <div class="col-lg-6 col-12">
                                         <span class="d-block fw-bold fs-7">Package Size</span>
                                         <div class="input-group-sm input-group">
                                             <span class="input-group-text text-info"><i class="fas fa-box"></i></span>
@@ -395,7 +395,8 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-lg col-12">
+                                    <!-- weight -->
+                                    <div class="col-lg-6 col-12">
                                         <span class="d-block fw-bold fs-7">Weight</span>
                                         <div class="input-group-sm input-group">
                                             <span class="input-group-text text-info"><i
@@ -408,10 +409,8 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- location and guaranty -->
-                                <div class="row">
-                                    <div class="col-lg col-12">
+                                    <!-- Location -->
+                                    <div class="col-lg-6 col-12">
                                         <span class="d-block fw-bold fs-7">Store Location</span>
                                         <div class="input-group-sm input-group">
                                             <span class="input-group-text text-info"><i
@@ -419,12 +418,12 @@
                                             <input type="text" class="form-control" placeholder="Store Location">
                                         </div>
                                     </div>
-                                    <div class="col-lg col-12">
+                                    <!-- Guranaty -->
+                                    <div class="col-lg-6 col-12">
                                         <span class="d-block fw-bold fs-7">Guaranty</span>
                                         <input type="range" class="form-range" min="0" max="365">
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Pricing -->

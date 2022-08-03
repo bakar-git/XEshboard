@@ -18,42 +18,24 @@ Rules for writing CSS
 
 
 /* //////////// */
-/* Normal LAYOUT */
+/* LAYOUT */
 /* //////////// */
-
-#body-wrapper[data-layout='normal'] {
-    min-height: 100vh;
-    overflow: hidden auto;
-}
-#body-wrapper[data-layout='normal'] #lb-config-panel, 
-#body-wrapper[data-layout='normal'] #product-page-scrollSpy{
-    position: fixed!important;
-}
-/* //////////// */
-/* FIXED LAYOUT */
-/* //////////// */
-#body-wrapper[data-layout='fixed'] {
+#body-wrapper {
     min-height: 100vh;
     max-height: 100vh;
     overflow: hidden;
 }
 
-#body-wrapper[data-layout='fixed'] #lb-items {
+#body-wrapper #lb-items {
     overflow: visible auto;
 }
 
-#body-wrapper[data-layout='fixed'] #content{
+#body-wrapper #content{
     overflow: hidden;
 }
-#body-wrapper[data-layout='fixed'] #content-in{
+#body-wrapper #content-in{
     height: 100%;
     overflow: auto;
-}
-
-
-#body-wrapper[data-layout='fixed'] #product-page-scrollSpy{
-    position: absolute;
-    top: 0;
 }
 
 /* //////////// */
@@ -70,7 +52,7 @@ Rules for writing CSS
 
 #left-bar-in {
     background: inherit;
-    will-change: width;
+    will-change: width, opacity;
     width: 16rem;
     transition: width 250ms, opacity 250ms;
     z-index: 30;
