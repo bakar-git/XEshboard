@@ -25,7 +25,10 @@ Rules for writing CSS
     min-height: 100vh;
     overflow: hidden auto;
 }
-
+#body-wrapper[data-layout='normal'] #lb-config-panel, 
+#body-wrapper[data-layout='normal'] #product-page-scrollSpy{
+    position: fixed!important;
+}
 /* //////////// */
 /* FIXED LAYOUT */
 /* //////////// */
@@ -45,6 +48,12 @@ Rules for writing CSS
 #body-wrapper[data-layout='fixed'] #content-in{
     height: 100%;
     overflow: auto;
+}
+
+
+#body-wrapper[data-layout='fixed'] #product-page-scrollSpy{
+    position: absolute;
+    top: 0;
 }
 
 /* //////////// */
