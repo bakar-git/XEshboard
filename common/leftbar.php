@@ -17,17 +17,17 @@
     <!-- Left Bar Items -->
     <div id="lb-items">
         <!-- Simple Element (active) -->
-        <a href="index.html" class="active btn btn-outline-primary d-flex align-items-center mx-2 p-2 my-1 text-white border-0 lb-item">
+        <a class="active btn to-secondary d-flex align-items-center mx-2 px-2 my-1 text-white lb-item">
             <i class="fas fa-tachometer-alt"></i>
             <span class="name ms-2">Dashboard</span>
         </a>
         <!-- Simple Element -->
-        <a href="user.html" class="btn btn-outline-primary d-flex align-items-center mx-2 p-2 my-1 text-white border-0 lb-item">
+        <a class="btn to-secondary d-flex align-items-center mx-2 p-2 my-1 text-white lb-item">
             <i class="fas fa-user"></i>
             <span class="name ms-2">User</span>
         </a>
         <!-- Simple Element (with badge) -->
-        <a href="product.html" class="btn btn-outline-primary d-flex align-items-center mx-2 p-2 my-1 text-white border-0 lb-item">
+        <a class="btn to-secondary d-flex align-items-center mx-2 p-2 my-1 text-white lb-item">
             <i class="fas fa-cart-shopping"></i>
             <span class="name ms-2">Product</span>
             <span class="badge bg-danger ms-auto">100</span>
@@ -35,23 +35,26 @@
 
     </div>
     <!-- Left Bar bottom panel -->
-    <div id="lb-bottom-icons" class="d-flex justify-content-between mt-auto border-top border-dark-n2 px-2">
-        <button class="btn btn-outline-info px-3 my-1 text-white border-0"><i class="fas fa-gear fa-sm"></i></button>
-        <button class="btn btn-outline-success px-3 my-1 text-white border-0"><i class="fas fa-expand fa-sm"></i></button>
-        <button class="btn btn-outline-warning px-3 my-1 text-white border-0"><i class="fas fa-lock fa-sm"></i></button>
-        <button class="btn btn-outline-danger px-3 my-1 text-white border-0"><i class="fas fa-sign-out fa-sm"></i></button>
+    <div id="lb-bottom-icons" class="mt-auto border-top border-dark-n2 d-flex flex-column position-relative">
+        <button class="btn btn-secondary py-2 text-white mt-auto rounded-0 d-none shadow-none"><i class="fas fa-arrow-right-to-bracket fa-sm"></i></button>
+        <div class="bg-dark-n1 d-flex w-100 justify-content-between px-2">
+            <button class="btn btn-outline-info px-3 my-1 text-white border-0"><i class="fas fa-gear fa-sm"></i></button>
+            <button class="btn btn-outline-success px-3 my-1 text-white border-0"><i class="fas fa-expand fa-sm"></i></button>
+            <button class="btn btn-outline-warning px-3 my-1 text-white border-0"><i class="fas fa-lock fa-sm"></i></button>
+            <button class="btn btn-outline-danger px-3 my-1 text-white border-0"><i class="fas fa-sign-out fa-sm"></i></button>
+        </div>
     </div>
     <!-- Left bar setting panel (small panel) -->
     <div id="lb-config-panel" class="position-absolute top-50 translate-middle-y">
-        <div class="px-1 btn-primary position-relative">
+        <div id="toggle-lb-overlay" class="px-1 bg-dark-n2 cursor-pointer to-secondary text-white position-relative">
             <i class="fas fa-thumb-tack fa-2xs"></i>
             <i class="fas fa-slash fa-sm position-absolute top-50 start-50 translate-middle text-light"></i>
         </div>
-        <div class="px-1 btn-primary position-relative">
+        <div id="toggle-lb-display-compact" class="px-1 bg-dark-n2 cursor-pointer to-secondary text-white position-relative">
             <i class="fas fa-arrow-alt-circle-left fa-2xs"></i>
             <i class="fas fa-slash fa-sm position-absolute top-50 start-50 translate-middle text-light"></i>
         </div>
-        <div class="px-1 btn-primary position-relative">
+        <div id="toggle-lb-interaction-mouse" class="px-1 bg-dark-n2 cursor-pointer to-secondary text-white position-relative">
             <i class="fas fa-mouse fa-2xs"></i>
             <i class="fas fa-slash fa-sm position-absolute top-50 start-50 translate-middle text-light"></i>
         </div>

@@ -8,7 +8,6 @@ Rules for writing CSS
 
 3- Avoid !important but use it when replacing bootstrap value
 4- Use rem instead of px
-
 */
 
 
@@ -17,27 +16,31 @@ Rules for writing CSS
 }
 
 
-/* //////////// */
-/* LAYOUT */
-/* //////////// */
+::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: var(--bs-danger);
+}
+
 #body-wrapper {
     min-height: 100vh;
     max-height: 100vh;
     overflow: hidden;
 }
 
-#body-wrapper #lb-items {
-    overflow: visible auto;
-}
 
-#body-wrapper #content {
-    overflow: hidden;
-}
-
-#body-wrapper #content-in {
-    height: 100%;
-    overflow: auto;
-}
 
 /* //////////// */
 /* Left bar */
@@ -51,11 +54,18 @@ Rules for writing CSS
     z-index: 20;
 }
 
+/* temporary start */
+#left-bar-in{
+    box-shadow: .27rem 3rem .25rem rgba(0,0,0,0.3)!important;
+}
+/* temporary end */
+
+
 #left-bar-in {
     background: inherit;
     will-change: width, opacity;
     width: 16rem;
-    transition: width 250ms, opacity 250ms;
+    transition: width 300ms, opacity 400ms;
     z-index: 30;
 }
 
@@ -70,12 +80,22 @@ Rules for writing CSS
 
 /* temporary end */
 
-#lb-items>.lb-item,
-#lb-bottom-icons {
-    flex-direction: row;
+#lb-items {
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-#lb-bottom-icons>button {
+#lb-items>.lb-item {
+    flex-direction: row;
+    padding-top: 0.7rem!important;
+    padding-bottom: 0.7rem!important;
+}
+#lb-items>.lb-item.active{
+    background-color: var(--bs-primary)!important;
+}
+
+
+#lb-bottom-icons>div>button {
     box-shadow: 0px 4px 10px 0px black;
 }
 
@@ -85,7 +105,8 @@ Rules for writing CSS
 }
 
 #lb-config-panel,
-#lb-config-panel>div>i:nth-child(2) {
+#lb-config-panel>div>i:nth-child(2),
+#toggle-lb-display-close > i:nth-child(2) {
     display: none;
 }
 
@@ -96,6 +117,10 @@ Rules for writing CSS
 #left-bar-in:hover>#lb-config-panel {
     display: block;
     animation: fx_show 200ms linear 1 forwards;
+}
+
+#left-bar[data-display='normal'] #lb-items > .lb-item .name{
+    height: auto!important;
 }
 
 /* compact left bar  */
@@ -110,54 +135,65 @@ Rules for writing CSS
 }
 
 /* temporary end */
-#left-bar[data-display='compact'] #lb-items>.lb-item,
-#left-bar[data-display='compact'] #lb-bottom-icons {
+#left-bar[data-display='compact'] #lb-items>.lb-item {
     flex-direction: column;
 }
 
 #left-bar[data-display='compact'] #lb-items>.lb-item {
-    margin-left: 0.25rem !important;
-    margin-right: 0.25rem !important;
-}
-
-/* #left-bar[data-display='compact'] #lb-items > .lb-item{
-    margin-left: 0rem!important;
-    margin-right: 0rem!important;
-    padding-top: 0.6rem!important;
-    padding-bottom: 0.6rem!important;
-    border-radius: 0;
+    margin-left: 0rem !important;
+    margin-right: 0rem !important;
+    border-radius: 0!important;
     position: relative;
-} */
-/* #left-bar[data-display='compact'] #lb-items > .lb-item:hover .name{
-    position: absolute;
-    background: inherit;
-    display: block!important;
-    height: 100%;
-    top: 0;
-    left: 80%;
-    width: 12.8rem;
-    border-radius: 0px 10px 10px 0px;
-    opacity: 0;
-    animation: fx_show 200ms linear 1 forwards;
-} */
+}
 
 #left-bar[data-display='compact'] #lb-items>.lb-item>.name,
 #left-bar[data-display='compact'] #lb-items>.lb-item>.badge,
-#left-bar[data-display='compact'] #lb-search-bar {
+#left-bar[data-display='compact'] #lb-search-bar,
+#left-bar[data-display='compact'] #lb-bottom-icons>div {
     display: none !important;
 }
 
-#left-bar[data-display='compact'] #lb-bottom-icons {
-    padding-left: 0.25rem !important;
-    padding-right: 0.25rem !important;
+#left-bar[data-display='compact'] #lb-items > .lb-item:hover .name,
+#left-bar[data-display='compact'] #lb-bottom-icons>button {
+    display: block !important;
 }
 
-#left-bar[data-display='compact'] #lb-bottom-icons>button {
-    box-shadow: none;
+#left-bar[data-display='compact'] #lb-items > .lb-item .name,
+#left-bar[data-display='compact'] #lb-bottom-icons>div {
+    animation: fx_show 300ms, fx_slide_right 200ms;
+    animation-fill-mode: forwards, forwards;
+    opacity: 0;
+    background: inherit;
 }
+
+
+#left-bar[data-display='compact'] #lb-items > .lb-item .name{
+    z-index: -1;
+    left: 2.5rem;
+    position: fixed;
+    width: 12.3rem;
+    line-height: 2.3;
+}
+#left-bar[data-display='compact'] #lb-bottom-icons>div{
+    height: 100%;
+    top: 0%;
+    left: 100%;
+    width: 16rem!important;
+    position: absolute;
+}
+
+#left-bar[data-display='compact'] #lb-bottom-icons>button:hover+div,
+#left-bar[data-display='compact'] #lb-bottom-icons>div:hover {
+    display: flex !important;
+}
+
 
 #left-bar[data-display='compact'] #left-bar-in>#lb-config-panel {
     left: 3.2rem;
+}
+
+#left-bar[data-display='compact'] #left-bar-in>#lb-config-panel > #toggle-lb-display-compact {
+    transform: rotateY(180deg);
 }
 
 /* close left bar */
@@ -174,11 +210,27 @@ Rules for writing CSS
     height: 100%;
 }
 
+#left-bar[data-overlay='true'] #left-bar-in> #lb-config-panel > #toggle-lb-overlay {
+    background-color: var(--bs-primary)!important;
+}
+
 /* interaction mouse -> left bar */
 #left-bar[data-interaction='mouse'] #left-bar-in:not(:hover) {
     width: 2px;
     opacity: 0;
     overflow: hidden;
+}
+#left-bar[data-interaction='mouse'] #left-bar-in> #lb-config-panel > #toggle-lb-interaction-mouse{
+    background-color: var(--bs-primary)!important;
+}
+#left-bar[data-interaction='mouse'] #left-bar-in>#lb-config-panel > #toggle-lb-display-compact,
+#left-bar[data-interaction='mouse'] + section > #top-bar > #toggle-lb-display-close{
+    pointer-events: none;
+    cursor: not-allowed;
+}
+#left-bar[data-interaction='mouse'] #left-bar-in>#lb-config-panel > #toggle-lb-display-compact > i:nth-child(2),
+#left-bar[data-interaction='mouse'] + section > #top-bar > #toggle-lb-display-close > i:nth-child(2) {
+    display: block;
 }
 
 /* ///////////////////// */
@@ -258,6 +310,7 @@ Rules for writing CSS
 }
 
 .tb-item:focus .tb-dropdown-menu,
+.tb-item:focus-within .tb-dropdown-menu,
 .tb-dropdown-menu:hover,
 .tb-dropdown-menu:focus,
 .tb-dropdown-menu:focus-within {
@@ -296,7 +349,15 @@ Rules for writing CSS
 /* Mid section */
 /* //////////// */
 
-/* product add page */
+#content[data-display='expand']{
+    position: fixed!important;
+    z-index: 200;
+}
+#content[data-display='expand'] #toggle-content-display-expand > i::before{
+    content: '\f066'!important;
+}
+
+/* product add page
 .c-form-select {
     padding-left: 2px !important;
     padding-right: 30px !important;
@@ -309,7 +370,7 @@ Rules for writing CSS
 
 #product-brand .nav-item>a.active {
     background-color: var(--bs-light);
-    border-radius: 0!important ;
+    border-radius: 0 !important;
 }
 
 .dz-preview {
@@ -352,7 +413,7 @@ Rules for writing CSS
 .rating_star input:checked~input::before {
     content: "\2605";
     color: var(--bs-primary);
-}
+} */
 
 
 
@@ -360,12 +421,19 @@ Rules for writing CSS
 /* //////////// */
 /* Utilities */
 /* //////////// */
+
+:root{
+    --dark-n1 : #30363c;
+    --dark-n2 : #3c434b; 
+    --light-1 : #ecf0f3;  
+}
+
 .bg-dark-n1 {
-    background-color: #30363c !important;
+    background-color: var(--dark-n1) !important;
 }
 
 .bg-dark-n2 {
-    background-color: #3c434b !important;
+    background-color: var(--dark-n2) !important;
 }
 
 .bg-inherit {
@@ -374,7 +442,7 @@ Rules for writing CSS
 }
 
 .border-dark-n2 {
-    border-color: #3c434b !important;
+    border-color: var(--dark-n2) !important;
 }
 
 .l-bg-danger {
@@ -407,7 +475,8 @@ Rules for writing CSS
 }
 
 .to-primary,
-.to-light-1 {
+.to-light-1,
+.to-secondary {
     background-color: transparent;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
@@ -418,8 +487,14 @@ Rules for writing CSS
 }
 
 .to-light-1:hover,
+.to-light-1.active,
 .bg-light-1 {
-    background-color: #ecf0f3 !important;
+    background-color: var(--light-1) !important;
+}
+
+.to-secondary:hover,
+.to-secondary.active{
+    background-color: var(--bs-secondary)!important;
 }
 
 .text-light-transparent {
@@ -427,7 +502,7 @@ Rules for writing CSS
 }
 
 .text-dark-n2 {
-    color: #3c434b !important;
+    color: var(--dark-n2) !important;
 }
 
 .h7,
@@ -443,6 +518,11 @@ Rules for writing CSS
 .h9,
 .fs-9 {
     font-size: 0.7rem !important;
+}
+
+
+.cursor-pointer{
+    cursor: pointer;
 }
 
 /* //////////// */
@@ -463,6 +543,17 @@ Rules for writing CSS
     100% {
         transform: translate(-50%, -50%) scale(3, 3);
         opacity: 0;
+    }
+}
+
+
+@keyframes fx_slide_right {
+    0% {
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
 }
 

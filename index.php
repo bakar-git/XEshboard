@@ -22,18 +22,12 @@
 </head>
 
 <body>
-    <!-- 
-        layout : normal, fixed
-     -->
-    <div class="d-flex" id="body-wrapper" data-layout="normal">
+    <div class="d-flex" id="body-wrapper">
         <!-- LEFT BAR START -->
         <!-- 
             display : close, compact, normal
             overlay : false, true
             interaction : normal, mouse-over
-        -->
-        <!-- 
-            Avoid display change when interaction : mouse
         -->
         <section id="left-bar" class="bg-dark-n1 start-0" data-display="normal" data-overlay="false" data-interaction="normal">
             <?php include "./common/leftbar.php"; ?>
@@ -49,8 +43,11 @@
             <!-- TOP BAR END -->
 
             <!-- CONTENT START -->
-            <section id="content" class="bg-light-1 h-100">
-                <?php include "./pages/dashboard.php" ?>
+            <!-- 
+                display : expand, normal
+            -->
+            <section id="content" class="overflow-auto bg-light-1 d-flex flex-column h-100 position-relative top-0 start-0 w-100" data-display="normal">
+                <?php include "./pages/product_list.php" ?>
             </section>
             <!-- CONTENT END -->
         </section>
@@ -67,13 +64,13 @@
     <!-- cdn -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     <script src="asset/lib/bs5/bootstrap.bundle.min.js"></script>
-    
+
     <!-- FONTAWESOME 6 CSS -->
     <!-- cdn -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <!-- local -->
     <link rel="stylesheet" href="asset/lib/fa6/css/all.min.css">
-    
+
     <!-- GOOGLE FONTS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 </body>

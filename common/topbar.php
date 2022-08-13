@@ -1,9 +1,10 @@
 <!-- Left Bar Close Toggle -->
-<div onclick="lb_display_toggle()" class="btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white tb-item">
-        <i class="fas fa-bars fa-lg"></i>
-    </div>
+<div id="toggle-lb-display-close" class="btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white position-relative tb-item">
+    <i class="fas fa-bars fa-lg"></i>
+    <i class="fas fa-slash fa-2x position-absolute top-50 start-50 translate-middle text-light"></i>
+</div>
     <!-- Message Dropdown -->
-    <div tabindex="-1" class="shadow-none ms-auto btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white position-relative tb-item">
+    <div tabindex="0" class="ms-auto btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white position-relative tb-item">
         <!-- icon -->
         <i class="fas fa-envelope fa-lg position-relative">
             <span class="indicator"></span>
@@ -75,7 +76,7 @@
         </div>
     </div>
     <!-- Notifications Dropdown -->
-    <div tabindex="-1" class="shadow-none btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white position-relative tb-item">
+    <div tabindex="0" class="btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white position-relative tb-item">
         <i class="fas fa-bell fa-lg position-relative">
             <span class="indicator"></span>
         </i>
@@ -120,7 +121,7 @@
         </div>
     </div>
     <!-- Task Dropdown -->
-    <div tabindex="-1" class="shadow-none btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white position-relative tb-item">
+    <div tabindex="0" class="btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white position-relative tb-item">
         <i class="fas fa-tasks-alt fa-lg position-relative">
             <span class="indicator"></span>
         </i>
@@ -170,16 +171,16 @@
         </div>
     </div>
     <!-- Profile -->
-    <div tabindex="-1" class="shadow-none btn btn-outline-primary border-0 rounded-0 px-2 d-flex align-items-center text-white position-relative tb-item">
+    <div tabindex="0" class="btn btn-outline-primary border-0 rounded-0 px-2 d-flex align-items-center text-white position-relative tb-item">
         <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle img-fluid h-100 border border-light border-2">
         <span class="ms-1">Valeria Dokanovic</span>
         <!-- dropdown menu -->
-        <div class="text-center text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 17rem;">
+        <div class="text-center text-dark bg-light-1 shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 17rem;">
             <div class="d-flex flex-column">
                 <img src="https://randomuser.me/api/portraits/men/12.jpg" width="100px" height="100px" class="mx-auto mt-2 mb-1 rounded-circle img-fluid">
                 <span class="h5 m-0">Valeria Dokanovic</span>
                 <span class="text-muted mb-2">Innovative 3d artist</span>
-                <div class="text-start border-top">
+                <div class="text-start border-top bg-white">
                     <a href="#" class="d-block text-secondary to-primary py-1 px-3 border-bottom">
                         <i class="fas fa-user fa-sm"></i>
                         <span class="ms-1">Profile</span>
