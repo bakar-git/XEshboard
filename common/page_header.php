@@ -2,11 +2,12 @@
     <div class="py-1">
         <span class="h2 mb-0 text-black-50">Page Name</span>
     </div>
-    <button class="ms-auto rounded-0 btn btn-outline-secondary border-0 px-3">
-        <i class="fas fa-square-plus"></i>
+    <button class="ms-2 rounded-0 btn btn-outline-secondary border-0 px-3">
+        <i class="fas fa-plus-square me-1"></i>
+        <span>Create New</span>
     </button>
     <!-- Search Bar -->
-    <div id="content-in-search" class="d-flex align-items-stretch">
+    <div id="content-in-search" class="ms-auto d-flex align-items-stretch">
         <button class="rounded-0 btn btn-outline-secondary border-0 px-3">
             <i class="fas fa-search"></i>
         </button>
