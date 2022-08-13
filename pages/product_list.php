@@ -1,96 +1,63 @@
 <!-- Header -->
-<div class="d-flex px-2 align-items-stretch shadow-sm bg-light">
-    <div class="py-1">
-        <span class="h2 mb-0 text-black-50">Product Listing</span>
-    </div>
-    <button id="toggle-content-display-expand" class="ms-auto me-2 rounded-0 btn btn-outline-secondary border-0 px-3">
-        <i class="fas fa-expand"></i>
-    </button>
-    <button class="rounded-0 btn btn-outline-secondary border-0 px-3">
-        <i class="fas fa-gear"></i>
-    </button>
-</div>
+<?php include "./common/page_header.php" ?>
 <!-- Body -->
 <div class="p-4 overflow-auto h-100" id="content-in">
-    <style>
-        /* ====================== */
-        /* Absolute style of table*/
-        /* ====================== */
-
-        /* table row */
-        .c-table>.tr {
-            display: flex;
-            width: 100%;
-            flex-wrap: wrap;
-        }
-
-        /* table data*/
-        .c-table>.tr>.td {
-            display: flex;
-            align-items: center;
-            flex: 1;
-        }
-
-        /* table data (inside) */
-        .c-table>.tr>.td>.td-in,
-        .c-table>.tr>.td::before {
-            padding: 0.25rem;
-            word-break: break-all;
-        }
-
-        .c-table>.tr>.td>.td-in {
-            flex: 2;
-        }
-
-        .c-table>.tr>.td::before {
-            content: attr(data-col);
-            display: none;
-            flex: 1;
-        }
-
-        /* Interactions */
-        .c-table>.tr>.td.expand {
-            flex-basis: 100%!important;
-            display: none;
-        }
-
-        .c-table>.tr.show>.td {
-            display: flex!important;
-        }
-
-        .c-table>.tr.show> .td:first-child i {
-            transform: rotateZ(90deg);
-        }
-
-        /* DropDown */
-        .c-table>.tr>.td:first-child {
-            justify-content: center;
-            width: 1.5rem;
-            flex: 0 1 auto;
-        }
-
-        /* ====================== */
-        /* Theme style of table*/
-        /* ====================== */
-
-        .c-table>.tr>.td{
-            border: 1px solid rgba(207, 201, 201, 0.3);
-        }
-        .c-table > .tr:first-child{
-            background-color: var(--bs-info);
-            color: white;
-        }
-        .c-table>.tr>.td::before {
-           background-color: var(--bs-info);
-           color: white;
-        }
-        .c-table .tr:nth-child(even){
-            background-color: #a3eaf8;
-        }
-
-    </style>
-    <div class="p-2 shadow border-5 border-top border-white rounded-3 text-black-50" id="table-here">
-
+    <link rel="stylesheet" href="./asset/css/table.css">
+    <div class="row">
+        <div class="col-xl-3 col-sm-6 col-12">
+            <div class="p-3 text-white my-2 l-bg-info rounded-3 shadow position-relative">
+                <i class="fas fa-info-circle fa-7x ms-auto text-light-transparent position-absolute end-0"></i>
+                <span class="d-block h5 mb-4">New Orders</span>
+                <div class="d-flex align-items-end mb-2">
+                    <span class="h2 fw-bold">3,2423</span>
+                    <span class="ms-auto h5">+50%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+            <div class="p-3 text-white my-2 l-bg-warning rounded-3 shadow position-relative">
+                <i class="fas fa-warning fa-7x ms-auto text-light-transparent position-absolute end-0"></i>
+                <span class="d-block h5 mb-4">New Orders</span>
+                <div class="d-flex align-items-end mb-2">
+                    <span class="h2 fw-bold">3,2423</span>
+                    <span class="ms-auto h5">+50%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+            <div class="p-3 text-white my-2 l-bg-success rounded-3 shadow position-relative">
+                <i class="fas fa-thumbs-up fa-7x ms-auto text-light-transparent position-absolute end-0"></i>
+                <span class="d-block h5 mb-4">New Orders</span>
+                <div class="d-flex align-items-end mb-2">
+                    <span class="h2 fw-bold">3,2423</span>
+                    <span class="ms-auto h5">+50%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+            <div class="p-3 text-white my-2 l-bg-danger rounded-3 shadow position-relative">
+                <i class="fas fa-skull-crossbones fa-7x ms-auto text-light-transparent position-absolute end-0"></i>
+                <span class="d-block h5 mb-4">New Orders</span>
+                <div class="d-flex align-items-end mb-2">
+                    <span class="h2 fw-bold">3,2423</span>
+                    <span class="ms-auto h5">+50%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 50%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-2 shadow border-5 border-top border-white rounded-3 text-black-50 mt-3" id="table-here">
         <div class="c-table">
             <!-- header -->
             <div class="tr">
@@ -99,7 +66,10 @@
                 </div>
                 <div class="td">
                     <div class="td-in">
-                        <span>ID</span>
+                        <button class="btn btn-info rounded-0 text-white w-100 text-start">
+                            <span>ID</span>
+                            <i class="fas fa-sort ms-2"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="td">
@@ -155,45 +125,54 @@
                 </div>
             </div>
         </div>
-        <script type="module">
-            import bst_table from './asset/js/table.js';
-            // id, first_name, dob, cnic, sex, email
-            let header_columns = [
-                {
-                    name: 'ID',
-                    size: 1,
-                    break_at: '0px'
-                },
-                {
-                    name: 'Name',
-                    size: 1,
-                    break_at: '500px'
-                },
-                {
-                    name: 'Date Of Birth',
-                    size: 1,
-                    break_at: '1000px'
-                },
-                {
-                    name: 'CNIC',
-                    size: 1,
-                    break_at: '1400px'
-                },
-                {
-                    name: 'Gender',
-                    size: 1,
-                    break_at: '800px'
-                },
-                {
-                    name: 'Email',
-                    size: 2,
-                    break_at: '600px'
-                },
-            ];
-            document.getElementById("table-here").innerHTML = "";
-            let myTable = new bst_table("#table-here", header_columns);
-            document.addEventListener("DOMContentLoaded", ()=>{
-                fetch('dataLoader.php')
+    </div>
+    <script type="module">
+        import bst_table from './asset/js/table.js';
+        // id, first_name, dob, cnic, sex, email
+        let header_columns = [
+            {
+                name: 'ID',
+                data:
+                    `<button class="btn btn-info rounded-0 text-white w-100 text-start">` +
+                    `        <span>ID</span>` +
+                    `        <i class="fas fa-sort ms-2"></i>` +
+                    `</button>`
+            },
+            {
+                name: 'Name',
+                break_at: '500px',
+            },
+            {
+                name: 'Date Of Birth',
+                break_at: '1000px',
+            },
+            {
+                name: 'CNIC',
+                break_at: '1400px'
+            },
+            {
+                name: 'Gender',
+                break_at: '800px'
+            },
+            {
+                name: 'Email',
+                size: 2,
+                break_at: '600px'
+            },
+            {
+                name: ' ',
+                size: 0.28,
+            },
+            {
+                name: ' ',
+                size: 0.28,
+            },
+        ];
+        document.getElementById("table-here").innerHTML = "";
+        let myTable = new bst_table("#table-here", header_columns);
+        window.tbl = myTable;
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('dataLoader.php')
                 .then((response) => response.json())
                 .then((data) => {
                     data.forEach(element => {
@@ -203,11 +182,12 @@
                             element.dob,
                             element.cnic,
                             element.sex,
-                            element.email
+                            element.email,
+                            '<button class="btn btn-success px-2 py-1" title="edit"><i class="fas fa-edit fa-xs"></i></button>',
+                            '<button class="btn btn-danger px-2 py-1" title="remove"><i class="fas fa-trash fa-xs"></i></button>',
                         ]);
                     });
                 });
-            })
-        </script>
-    </div>
+        })
+    </script>
 </div>

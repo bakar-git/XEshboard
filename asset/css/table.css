@@ -1,0 +1,75 @@
+/* ====================== */
+/* Absolute style of table*/
+/* ====================== */
+
+/* table row */
+.c-table .tr {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* table data*/
+.c-table .tr .td {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* table data (inside) */
+.c-table .tr .td .td-in,
+.c-table .tr .td::before {
+    padding: 0.25rem;
+    word-break: break-all;
+}
+
+.c-table .tr .td .td-in {
+    flex: 2;
+}
+
+.c-table .tr .td::before {
+    content: attr(data-col);
+    display: none;
+    flex: 1;
+    height: 100%;
+}
+
+/* DropDown */
+.c-table .tr .td:first-child {
+    justify-content: center;
+    width: 1.5rem;
+    flex: 0 1 auto;
+}
+
+/* Interactions */
+.c-table .tr .td.expand {
+    flex-basis: 100% !important;
+    display: none;
+}
+
+.c-table .tr.show .td {
+    display: flex !important;
+}
+
+.c-table .tr.show .td:first-child i {
+    transform: rotateZ(90deg);
+}
+
+/* ====================== */
+/* Theme style of table*/
+/* ====================== */
+
+.c-table .tr .td {
+    border: 1px solid rgba(207, 201, 201, 0.3);
+}
+
+.c-table .thead .tr,
+.c-table .tr .td::before {
+    background: var(--bs-info);
+    color: white;
+}
+
+.c-table .tr:nth-child(even) {
+    background: var(--bs-light);
+}

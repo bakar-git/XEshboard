@@ -1,4 +1,4 @@
-<div id="content-in" class="p-4">
+<div id="content-in" class="p-4 overflow-auto h-100">
     <!-- card style 1 -->
     <div class="row">
         <div class="col-xl-3 col-sm-6 col-12">
