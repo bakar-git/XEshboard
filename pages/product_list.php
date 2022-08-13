@@ -1,7 +1,7 @@
 <!-- Header -->
 <div class="d-flex px-2 align-items-stretch shadow-sm bg-light">
     <div class="py-1">
-        <span class="h2 mb-0 text-black-50">Products</span>
+        <span class="h2 mb-0 text-black-50">Product Listing</span>
     </div>
     <button id="toggle-content-display-expand" class="ms-auto me-2 rounded-0 btn btn-outline-secondary border-0 px-3">
         <i class="fas fa-expand"></i>

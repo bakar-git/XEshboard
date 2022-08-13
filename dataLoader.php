@@ -8,7 +8,7 @@
     if($con->connect_error) die("Connection failed : ". $con->connect_error);
     $con->query("USE cust");
 
-    $sql = "SELECT id, first_name, dob, cnic, sex, email FROM students WHERE term ='213' limit 100";
+    $sql = "SELECT id, first_name, dob, cnic, sex, email FROM students WHERE term ='213' limit 10";
     $result = $con->query($sql);
 
     $result_to_send;

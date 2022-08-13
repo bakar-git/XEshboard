@@ -199,7 +199,8 @@ Rules for writing CSS
 /* close left bar */
 
 #left-bar[data-display='close'] #left-bar-in {
-    width: 0rem;
+    width: 0px;
+    opacity: 0;
     overflow: hidden;
 }
 
