@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta http-equiv="refresh" content="1"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- BOOTSTRAP CSS -->
     <!-- cdn -->
@@ -47,7 +47,7 @@
                 display : expand, normal
             -->
             <section id="content" class="overflow-auto bg-light-1 d-flex flex-column h-100 position-relative top-0 start-0 w-100" data-display="normal">
-                <?php include "./pages/product_list.php" ?>
+                <?php include "./pages/login.php" ?>
             </section>
             <!-- CONTENT END -->
         </section>

@@ -1,14 +1,14 @@
-<div class="d-flex px-2 align-items-stretch shadow-sm bg-light position-relative">
-    <div class="py-1">
-        <span class="h2 mb-0 text-black-50">Page Name</span>
+<div class="d-flex px-4 align-items-stretch shadow-sm bg-light position-relative">
+    <div class="py-2">
+        <span class="h1 mb-0 text-black-50 ">Dashboard</span>
     </div>
-    <button class="ms-2 rounded-0 btn btn-outline-secondary border-0 px-3">
+    <button class="ms-3 rounded-0 btn btn-primary px-3">
         <i class="fas fa-plus-square me-1"></i>
-        <span>Create New</span>
+        <span class="d-none d-md-inline">Create New</span>
     </button>
     <!-- Search Bar -->
     <div id="content-in-search" class="ms-auto d-flex align-items-stretch">
-        <button class="rounded-0 btn btn-outline-secondary border-0 px-3">
+        <button class="btn btn-outline-secondary border-0 px-3 my-2">
             <i class="fas fa-search"></i>
         </button>
         <div class="position-absolute w-100 start-0 top-0 h-100 px-4 py-1 bg-info">
@@ -16,16 +16,16 @@
                 <input type="text" class="form-control shadow-none w-100 h-100 rounded-0 rounded-start" placeholder="Search">
             </div>
             <div class="w-10">
-                <button class="btn btn-secondary w-100 h-100 rounded-0 rounded-end">
+                <button class="btn btn-secondary px-1 py-0 w-100 h-100 rounded-0 rounded-end">
                     <i class="fas fa-search"></i>
                 </button>
             </div>
         </div>
     </div>
-    <button id="toggle-content-display-expand" class="rounded-0 btn btn-outline-secondary border-0 px-3">
+    <button id="toggle-content-display-expand" class="btn btn-outline-secondary border-0 px-3 my-2">
         <i class="fas fa-expand"></i>
     </button>
-    <button class="rounded-0 btn btn-outline-secondary border-0 px-3">
+    <button class="btn btn-outline-secondary border-0 px-3 my-2">
         <i class="fas fa-gear"></i>
     </button>
 </div>

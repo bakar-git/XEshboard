@@ -10,7 +10,7 @@
         <span class="indicator"></span>
     </i>
     <!-- dropdown menu -->
-    <div class="text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 19rem;">
+    <div class="text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu">
         <!-- header -->
         <div class="py-2 bg-light-1 text-secondary">
             <span>You hav 10 new messages</span>
@@ -20,7 +20,7 @@
             <!-- item -->
             <a href="#" class="d-flex align-items-center px-3 py-2 to-light-1 border-bottom">
                 <!-- img -->
-                <img src="https://randomuser.me/portraits/men/40.jpg" class="img-fluid rounded-circle" style="width: 50px;height: 50px;">
+                <img src="https://randomuser.me/portraits/men/34.jpg" class="img-fluid rounded-circle" style="width: 50px;height: 50px;">
                 <!-- body -->
                 <div class="d-flex flex-column ms-2 w-100 text-start overflow-hidden">
                     <!-- name & receiving-time -->
@@ -37,7 +37,7 @@
             <!-- item -->
             <a href="#" class="d-flex align-items-center px-3 py-2 to-light-1 border-bottom">
                 <!-- img -->
-                <img src="https://randomuser.me/portraits/men/40.jpg" class="img-fluid rounded-circle" style="width: 50px;height: 50px;">
+                <img src="https://randomuser.me/portraits/men/34.jpg" class="img-fluid rounded-circle" style="width: 50px;height: 50px;">
                 <!-- body -->
                 <div class="d-flex flex-column ms-2 w-100 text-start overflow-hidden">
                     <!-- name & receiving-time -->
@@ -54,7 +54,7 @@
             <!-- item -->
             <a href="#" class="d-flex align-items-center px-3 py-2 to-light-1 border-bottom">
                 <!-- img -->
-                <img src="https://randomuser.me/portraits/men/40.jpg" class="img-fluid rounded-circle" style="width: 50px;height: 50px;">
+                <img src="https://randomuser.me/portraits/men/34.jpg" class="img-fluid rounded-circle" style="width: 50px;height: 50px;">
                 <!-- body -->
                 <div class="d-flex flex-column ms-2 w-100 text-start overflow-hidden">
                     <!-- name & receiving-time -->
@@ -81,7 +81,7 @@
         <span class="indicator"></span>
     </i>
     <!-- dropdown menu -->
-    <div class="text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 19rem;">
+    <div class="text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu">
         <!-- header -->
         <div class="py-2 bg-light-1 text-secondary">
             <span>You hav 5 new notifications</span>
@@ -126,7 +126,7 @@
         <span class="indicator"></span>
     </i>
     <!-- dropdown menu -->
-    <div class="text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 19rem;">
+    <div class="text-dark bg-white shadow rounded-3 overflow-hidden tb-dropdown-menu">
         <!-- header -->
         <div class="py-2 bg-light-1 text-secondary">
             <span>You have 3 tasks</span>
@@ -172,12 +172,12 @@
 </div>
 <!-- Profile -->
 <div tabindex="0" class="btn btn-outline-primary border-0 rounded-0 px-2 d-flex align-items-center text-white position-relative tb-item">
-    <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle img-fluid h-100 border border-light border-2">
-    <span class="ms-1">Valeria Dokanovic</span>
+    <img src="https://randomuser.me/api/portraits/men/34.jpg" class="rounded-circle img-fluid h-100 border border-light border-2">
+    <span class="ms-1 d-none d-md-inline">Valeria Dokanovic</span>
     <!-- dropdown menu -->
-    <div class="text-center text-dark bg-light-1 shadow rounded-3 overflow-hidden tb-dropdown-menu" style="width: 17rem;">
+    <div class="text-center text-dark bg-light-1 shadow rounded-3 overflow-hidden tb-dropdown-menu">
         <div class="d-flex flex-column">
-            <img src="https://randomuser.me/api/portraits/men/12.jpg" width="100px" height="100px" class="mx-auto mt-2 mb-1 rounded-circle img-fluid">
+            <img src="https://randomuser.me/api/portraits/men/34.jpg" width="100px" height="100px" class="mx-auto mt-2 mb-1 rounded-circle img-fluid">
             <span class="h5 m-0">Valeria Dokanovic</span>
             <span class="text-muted mb-2">Innovative 3d artist</span>
             <div class="text-start border-top bg-white">

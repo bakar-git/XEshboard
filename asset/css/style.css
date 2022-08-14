@@ -279,6 +279,12 @@ Rules for writing CSS
 
 .tb-item .tb-dropdown-menu {
     display: none;
+    width: 19rem;
+}
+.tb-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
 }
 .tb-item .tb-dropdown-menu a:focus{
     outline: none;
@@ -326,18 +332,16 @@ Rules for writing CSS
 /* top bar media queries */
 /* ///////////////////// */
 
-@media (any-hover: hover),
-(any-pointer: fine) {
-    .tb-dropdown-menu {
-        position: absolute;
-        top: 100%;
-        right: 0;
-    }
-}
-
 @media (any-hover: none),
 (any-pointer: none) {
-    .tb-dropdown-menu {
+    /* .tb-dropdown-menu {
+        position: fixed;
+        top: 3rem;
+        right: 50%;
+        box-shadow: 0px 1px 10px -2px black!important;
+        transform: translateX(50%);
+    } */
+    .tb-dropdown-menu:not(:nth-child(3)){
         position: fixed;
         top: 3rem;
         right: 50%;
@@ -373,6 +377,18 @@ Rules for writing CSS
 }
 #content[data-display='expand'] #toggle-content-display-expand > i::before{
     content: '\f066'!important;
+}
+
+
+/* Login page */
+
+#section-login .nav-item>a {
+    color: var(--bs-gray);
+}
+
+#section-login .nav-item>a.active {
+    background-color: var(--bs-light);
+    border-radius: 0 !important;
 }
 
 /* product add page

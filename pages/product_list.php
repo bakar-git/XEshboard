@@ -132,11 +132,11 @@
         let header_columns = [
             {
                 name: 'ID',
-                data:
-                    `<button class="btn btn-info rounded-0 text-white w-100 text-start">` +
-                    `        <span>ID</span>` +
-                    `        <i class="fas fa-sort ms-2"></i>` +
-                    `</button>`
+                // data:
+                //     `<button class="btn btn-info rounded-0 text-white w-100 text-start">` +
+                //     `        <span>ID</span>` +
+                //     `        <i class="fas fa-sort ms-2"></i>` +
+                //     `</button>`
             },
             {
                 name: 'Name',
@@ -156,7 +156,7 @@
             },
             {
                 name: 'Email',
-                size: 2,
+                size: 3,
                 break_at: '600px'
             },
             {
