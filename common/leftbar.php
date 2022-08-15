@@ -17,14 +17,14 @@
     <!-- Left Bar Items -->
     <div id="lb-items">
         <!-- Simple Element (active) -->
-        <a href="#" class="active btn to-secondary d-flex align-items-center mx-2 px-2 my-1 text-white lb-item">
+        <a href="#" class="active btn to-secondary d-flex align-items-center mx-2 px-2 mb-1 text-white lb-item">
             <i class="fas fa-tachometer-alt"></i>
             <span class="name ms-2">Dashboard</span>
         </a>
         <!-- Simple Element -->
         <a href="#" class="btn to-secondary d-flex align-items-center mx-2 p-2 my-1 text-white lb-item">
             <i class="fas fa-user"></i>
-            <span class="name ms-2">User</span>
+            <span class="name ms-2">Users</span>
         </a>
         <!-- Simple Element (with badge) -->
         <a href="#" class="btn to-secondary d-flex align-items-center mx-2 p-2 my-1 text-white lb-item">

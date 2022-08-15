@@ -71,6 +71,7 @@ Rules for writing CSS
 
 #lb-brand {
     font-size: 1.7rem;
+    height: 3rem;
 }
 
 /* temporary strt */
@@ -128,7 +129,7 @@ Rules for writing CSS
 /* compact left bar  */
 
 #left-bar[data-display='compact'] #left-bar-in {
-    width: 3.2rem;
+    width: 4rem;
 }
 
 /* temporary strt */
@@ -146,21 +147,25 @@ Rules for writing CSS
     margin-right: 0rem !important;
     border-radius: 0!important;
     position: relative;
+    flex-direction: column;
 }
 
-#left-bar[data-display='compact'] #lb-items>.lb-item>.name,
+#left-bar[data-display='compact'] #lb-items>.lb-item>.name{
+    font-size: 0.6rem;
+    margin-left: 0px!important;
+}
+
+
 #left-bar[data-display='compact'] #lb-items>.lb-item>.badge,
 #left-bar[data-display='compact'] #lb-search-bar,
 #left-bar[data-display='compact'] #lb-bottom-icons>div {
     display: none !important;
 }
 
-#left-bar[data-display='compact'] #lb-items > .lb-item:hover .name,
 #left-bar[data-display='compact'] #lb-bottom-icons>button {
     display: block !important;
 }
 
-#left-bar[data-display='compact'] #lb-items > .lb-item .name,
 #left-bar[data-display='compact'] #lb-bottom-icons>div {
     animation: fx_show 300ms, fx_slide_right 200ms;
     animation-fill-mode: forwards, forwards;
@@ -168,14 +173,6 @@ Rules for writing CSS
     background: inherit;
 }
 
-
-#left-bar[data-display='compact'] #lb-items > .lb-item .name{
-    z-index: -1;
-    left: 2.5rem;
-    position: fixed;
-    width: 12.3rem;
-    line-height: 2.3;
-}
 #left-bar[data-display='compact'] #lb-bottom-icons>div{
     height: 100%;
     top: 0%;
@@ -189,9 +186,8 @@ Rules for writing CSS
     display: flex !important;
 }
 
-
 #left-bar[data-display='compact'] #left-bar-in>#lb-config-panel {
-    left: 3.2rem;
+    left: 4rem;
 }
 
 #left-bar[data-display='compact'] #left-bar-in>#lb-config-panel > #toggle-lb-display-compact {

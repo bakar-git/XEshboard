@@ -17,19 +17,19 @@ function lb_mobile_handler(){
 lb_mobile_handler();
 
 /* left bar comapct mode item hover handle */ 
-function lb_compact_item_hover(){
-    var leftbar = document.getElementById("left-bar");
-    document.querySelectorAll(".lb-item .name").forEach(elem=>{
-        elem.parentElement.onmouseover = () => {
-            if(leftbar.dataset.display == "compact"){
-                elem.style.top = elem.parentElement.getBoundingClientRect().top + "px";
-                elem.style.height = elem.parentElement.offsetHeight + "px";
-            }
-        }
-    });
-}
+// function lb_compact_item_hover(){
+//     var leftbar = document.getElementById("left-bar");
+//     document.querySelectorAll(".lb-item .name").forEach(elem=>{
+//         elem.parentElement.onmouseover = () => {
+//             if(leftbar.dataset.display == "compact"){
+//                 elem.style.top = elem.parentElement.getBoundingClientRect().top + "px";
+//                 elem.style.height = elem.parentElement.offsetHeight + "px";
+//             }
+//         }
+//     });
+// }
 
-lb_compact_item_hover();
+// lb_compact_item_hover();
 
 
 
