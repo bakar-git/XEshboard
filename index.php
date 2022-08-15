@@ -72,7 +72,7 @@
     <link rel="stylesheet" href="asset/lib/fa6/css/all.min.css">
 
     <!-- GOOGLE FONTS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback"> -->
 </body>
 
 </html>

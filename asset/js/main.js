@@ -46,5 +46,8 @@ function configs(){
     document.getElementById("toggle-lb-overlay").onclick = ()=>{leftbar.dataset.overlay = (leftbar.dataset.overlay == "true")? "false": "true";};
     document.getElementById("toggle-lb-display-compact").onclick = ()=>{leftbar.dataset.display = (leftbar.dataset.display == "normal")? "compact": "normal";};
     document.getElementById("toggle-lb-interaction-mouse").onclick = ()=>{leftbar.dataset.interaction = (leftbar.dataset.interaction == "normal")? "mouse": "normal";};
+    //right bar
+    var rightbar = document.getElementById("right-bar");
+    document.getElementById("toggle-rb-display-close").onclick = ()=>{rightbar.dataset.display = (rightbar.dataset.display == "normal")? "close": "normal";};
 }
 configs();

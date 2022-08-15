@@ -262,7 +262,25 @@ Rules for writing CSS
     }
 }
 
+/* //////////// */
+/* Right bar */
+/* //////////// */
 
+#right-bar{
+    width: 16rem;
+    will-change: width, opacity;
+    transition: width 300ms, opacity 400ms;
+    z-index: 30;
+}
+
+/* ///////////////////// */
+/* Right bar interactions*/
+/* ///////////////////// */
+#right-bar[data-display='close']{
+    width: 0px;
+    opacity: 0;
+    overflow: hidden;
+}
 
 
 /* //////////// */
