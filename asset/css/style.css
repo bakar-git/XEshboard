@@ -16,22 +16,19 @@ Rules for writing CSS
 }
 
 
-::-webkit-scrollbar
-{
-	width: 8px;
-	background-color: #F5F5F5;
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar-thumb
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: var(--bs-danger);
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: var(--bs-danger);
 }
 
 #body-wrapper {
@@ -56,9 +53,10 @@ Rules for writing CSS
 }
 
 /* temporary start */
-#left-bar-in{
-    box-shadow: .27rem 3rem .25rem rgba(0,0,0,0.3)!important;
+#left-bar-in {
+    box-shadow: .27rem 3rem .25rem rgba(0, 0, 0, 0.3) !important;
 }
+
 /* temporary end */
 
 
@@ -89,16 +87,19 @@ Rules for writing CSS
 
 #lb-items>.lb-item {
     flex-direction: row;
-    padding-top: 0.7rem!important;
-    padding-bottom: 0.7rem!important;
-}
-#lb-items>.lb-item.active{
-    background-color: var(--bs-primary)!important;
+    background-color: var(--dark-n2);
+    padding-top: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
 }
 
-#lb-bottom-icons>div>button:not(:focus){
-    border: none!important;
+#lb-items>.lb-item.active {
+    background-color: var(--bs-primary) !important;
 }
+
+#lb-bottom-icons>div>button:not(:focus) {
+    border: none !important;
+}
+
 #lb-bottom-icons>div>button {
     box-shadow: 0px 4px 10px 0px black;
 }
@@ -110,7 +111,7 @@ Rules for writing CSS
 
 #lb-config-panel,
 #lb-config-panel>div>i:nth-child(2),
-#toggle-lb-display-close > i:nth-child(2) {
+#toggle-lb-display-close>i:nth-child(2) {
     display: none;
 }
 
@@ -123,8 +124,8 @@ Rules for writing CSS
     animation: fx_show 200ms linear 1 forwards;
 }
 
-#left-bar[data-display='normal'] #lb-items > .lb-item .name{
-    height: auto!important;
+#left-bar[data-display='normal'] #lb-items>.lb-item .name {
+    height: auto !important;
 }
 
 /* compact left bar  */
@@ -137,6 +138,7 @@ Rules for writing CSS
 #left-bar[data-display='compact'] #lb-brand::before {
     content: 'XE';
 }
+
 /* temporary end */
 
 #left-bar[data-display='compact'] #lb-items>.lb-item {
@@ -146,14 +148,14 @@ Rules for writing CSS
 #left-bar[data-display='compact'] #lb-items>.lb-item {
     margin-left: 0rem !important;
     margin-right: 0rem !important;
-    border-radius: 0!important;
+    border-radius: 0 !important;
     position: relative;
     flex-direction: column;
 }
 
-#left-bar[data-display='compact'] #lb-items>.lb-item>.name{
+#left-bar[data-display='compact'] #lb-items>.lb-item>.name {
     font-size: 0.6rem;
-    margin-left: 0px!important;
+    margin-left: 0px !important;
 }
 
 
@@ -174,11 +176,11 @@ Rules for writing CSS
     background: inherit;
 }
 
-#left-bar[data-display='compact'] #lb-bottom-icons>div{
+#left-bar[data-display='compact'] #lb-bottom-icons>div {
     height: 100%;
     top: 0%;
     left: 100%;
-    width: 16rem!important;
+    width: 16rem !important;
     position: absolute;
 }
 
@@ -191,7 +193,7 @@ Rules for writing CSS
     left: 4rem;
 }
 
-#left-bar[data-display='compact'] #left-bar-in>#lb-config-panel > #toggle-lb-display-compact {
+#left-bar[data-display='compact'] #left-bar-in>#lb-config-panel>#toggle-lb-display-compact {
     transform: rotateY(180deg);
 }
 
@@ -210,8 +212,8 @@ Rules for writing CSS
     height: 100%;
 }
 
-#left-bar[data-overlay='true'] #left-bar-in> #lb-config-panel > #toggle-lb-overlay {
-    background-color: var(--bs-primary)!important;
+#left-bar[data-overlay='true'] #left-bar-in>#lb-config-panel>#toggle-lb-overlay {
+    background-color: var(--bs-primary) !important;
 }
 
 /* interaction mouse -> left bar */
@@ -220,36 +222,46 @@ Rules for writing CSS
     opacity: 0;
     overflow: hidden;
 }
-#left-bar[data-interaction='mouse'] #left-bar-in> #lb-config-panel > #toggle-lb-interaction-mouse{
-    background-color: var(--bs-primary)!important;
+
+#left-bar[data-interaction='mouse'] #left-bar-in>#lb-config-panel>#toggle-lb-interaction-mouse {
+    background-color: var(--bs-primary) !important;
 }
-#left-bar[data-interaction='mouse'] #left-bar-in>#lb-config-panel > #toggle-lb-display-compact,
-#left-bar[data-interaction='mouse'] + section > #top-bar #toggle-lb-display-close{
+
+#left-bar[data-interaction='mouse'] #left-bar-in>#lb-config-panel>#toggle-lb-display-compact,
+#left-bar[data-interaction='mouse']+section>#top-bar #toggle-lb-display-close {
     pointer-events: none;
     cursor: not-allowed;
 }
-#left-bar[data-interaction='mouse'] #left-bar-in>#lb-config-panel > #toggle-lb-display-compact > i:nth-child(2),
-#left-bar[data-interaction='mouse'] + section > #top-bar #toggle-lb-display-close > i:nth-child(2) {
+
+#left-bar[data-interaction='mouse'] #left-bar-in>#lb-config-panel>#toggle-lb-display-compact>i:nth-child(2),
+#left-bar[data-interaction='mouse']+section>#top-bar #toggle-lb-display-close>i:nth-child(2) {
     display: block;
 }
 
 
 /* Topbar first button behaviour on left bar different modes */
-#left-bar[data-overlay='true'][data-display='normal'] + section > #top-bar > div:nth-child(1){
-    position: absolute;
-    left: 16rem;
+@media (any-hover: hover),
+(any-pointer: fine) {
+    #left-bar[data-overlay='true'][data-display='normal']+section>#top-bar>div:nth-child(1) {
+        position: absolute;
+        left: 16rem;
+    }
+
+    #left-bar[data-overlay='true'][data-display='compact']+section>#top-bar>div:nth-child(1) {
+        position: absolute;
+        left: 4rem;
+    }
+
+    #left-bar[data-overlay='true'][data-display='close']+section>#top-bar>div:nth-child(1) {
+        position: absolute;
+        left: 0rem;
+    }
+
+    #left-bar[data-overlay='true'][data-display='normal'][data-interaction='mouse']+section>#top-bar>div:nth-child(1) {
+        position: static;
+    }
 }
-#left-bar[data-overlay='true'][data-display='compact'] + section > #top-bar > div:nth-child(1){
-    position: absolute;
-    left: 4rem;
-}
-#left-bar[data-overlay='true'][data-display='close'] + section > #top-bar > div:nth-child(1){
-    position: absolute;
-    left: 0rem;
-}
-#left-bar[data-overlay='true'][data-display='normal'][data-interaction='mouse'] + section > #top-bar > div:nth-child(1){
-    position: static;
-}
+
 
 /* ///////////////////// */
 /* left bar media queries */
@@ -281,7 +293,7 @@ Rules for writing CSS
 /* Right bar */
 /* //////////// */
 
-#right-bar{
+#right-bar {
     width: 16rem;
     will-change: width, opacity;
     transition: width 300ms, opacity 400ms;
@@ -291,7 +303,7 @@ Rules for writing CSS
 /* ///////////////////// */
 /* Right bar interactions*/
 /* ///////////////////// */
-#right-bar[data-display='close']{
+#right-bar[data-display='close'] {
     width: 0px;
     opacity: 0;
     overflow: hidden;
@@ -314,14 +326,17 @@ Rules for writing CSS
     display: none;
     width: 19rem;
 }
+
 .tb-dropdown-menu {
     position: absolute;
     top: 100%;
     right: 0;
 }
-.tb-item .tb-dropdown-menu a:focus{
+
+.tb-item .tb-dropdown-menu a:focus {
     outline: none;
 }
+
 .indicator::before {
     border: 2px solid var(--bs-light);
     animation: indicator 2s ease infinite;
@@ -366,7 +381,7 @@ Rules for writing CSS
 /* ///////////////////// */
 
 @media (max-width : 767px) {
-    .tb-dropdown-menu:not(:nth-child(3)){
+    .tb-dropdown-menu:not(:nth-child(3)) {
         position: fixed;
         top: 3rem;
         right: 50%;
@@ -382,11 +397,12 @@ Rules for writing CSS
 /* //////////// */
 /* Mid section */
 /* //////////// */
-#content-in-search > div{
+#content-in-search>div {
     opacity: 0;
     display: none;
 }
-#content-in-search:focus-within > div{
+
+#content-in-search:focus-within>div {
     animation: fx_show 500ms;
     animation-fill-mode: forwards;
     display: flex;
@@ -396,12 +412,13 @@ Rules for writing CSS
 /* Mid Section interactions */
 /* ///////////////////// */
 
-#content[data-display='expand']{
-    position: fixed!important;
+#content[data-display='expand'] {
+    position: fixed !important;
     z-index: 200;
 }
-#content[data-display='expand'] #toggle-content-display-expand > i::before{
-    content: '\f066'!important;
+
+#content[data-display='expand'] #toggle-content-display-expand>i::before {
+    content: '\f066' !important;
 }
 
 
@@ -481,10 +498,10 @@ Rules for writing CSS
 /* Utilities */
 /* //////////// */
 
-:root{
-    --dark-n1 : #30363c;
-    --dark-n2 : #3c434b; 
-    --light-1 : #ecf0f3;  
+:root {
+    --dark-n1: #30363c;
+    --dark-n2: #3c434b;
+    --light-1: #ecf0f3;
 }
 
 .bg-dark-n1 {
@@ -523,6 +540,7 @@ Rules for writing CSS
 .w-90 {
     width: 90% !important;
 }
+
 .w-80 {
     width: 80% !important;
 }
@@ -530,9 +548,11 @@ Rules for writing CSS
 .w-20 {
     width: 20% !important;
 }
+
 .w-10 {
     width: 10% !important;
 }
+
 .w-5 {
     width: 5% !important;
 }
@@ -564,8 +584,8 @@ Rules for writing CSS
 
 .to-secondary:hover,
 .to-secondary.active,
-.to-secondary:focus{
-    background-color: var(--bs-secondary)!important;
+.to-secondary:focus {
+    background-color: var(--bs-secondary) !important;
 }
 
 .text-light-transparent {
@@ -592,7 +612,7 @@ Rules for writing CSS
 }
 
 
-.cursor-pointer{
+.cursor-pointer {
     cursor: pointer;
 }
 

@@ -28,6 +28,6 @@
 </div>
 <!-- Create -->
 <button class="position-absolute bottom-0 end-0 translate-middle shadow btn btn-primary p-2" style="z-index: 10;">
-    <i class="fas fa-plus-square me-1"></i>
+    <i class="fas fa-plus-square me-0 me-md-1"></i>
     <span class="d-none d-md-inline">Create New</span>
 </button>
