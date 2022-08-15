@@ -127,8 +127,8 @@
         </div>
     </div>
     <script type="module">
-        import bst_table from './asset/js/table.js';
-        // id, first_name, dob, cnic, sex, email
+        import {Table} from './asset/js/table.js';
+        // id, first_name, dob, cnic, gender, email
         let header_columns = [
             {
                 name: 'ID',
@@ -141,23 +141,34 @@
             {
                 name: 'Name',
                 break_at: '500px',
+                editable : true,
+                func : (col)=>{
+                    col.addEventListener(Table.col_change_event_name, (evt)=>{
+                        console.log(evt.detail.previous_value);
+                        console.log(evt.detail.new_value);
+                    })
+                }
             },
             {
                 name: 'Date Of Birth',
                 break_at: '1000px',
+                editable : true,
             },
             {
                 name: 'CNIC',
-                break_at: '1400px'
+                break_at: '1400px',
+                editable : true,
             },
             {
                 name: 'Gender',
-                break_at: '800px'
+                break_at: '800px',
+                editable : true,
             },
             {
                 name: 'Email',
                 size: 3,
-                break_at: '600px'
+                break_at: '600px',
+                editable : true,
             },
             {
                 name: ' ',
@@ -169,7 +180,7 @@
             },
         ];
         document.getElementById("table-here").innerHTML = "";
-        let myTable = new bst_table("#table-here", header_columns);
+        let myTable = new Table("#table-here", header_columns);
         window.tbl = myTable;
         document.addEventListener("DOMContentLoaded", () => {
             fetch('dataLoader.php')

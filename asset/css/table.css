@@ -9,6 +9,16 @@
     flex-wrap: wrap;
 }
 
+/* Editor */
+.c-table input{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+
 /* table data*/
 .c-table .tr .td {
     overflow: hidden;
@@ -22,9 +32,14 @@
 .c-table .tr .td::before {
     padding: 0.25rem;
     word-break: break-all;
+    height: 100%;
 }
 
 .c-table .tr .td .td-in {
+    /* optional */
+    display: flex;
+    align-items: center;
+    position: relative;
     flex: 2;
 }
 
@@ -32,7 +47,6 @@
     content: attr(data-col);
     display: none;
     flex: 1;
-    height: 100%;
 }
 
 /* DropDown */

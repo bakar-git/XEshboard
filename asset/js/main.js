@@ -63,7 +63,3 @@ function configs() {
     document.getElementById("toggle-rb-display-close").onclick = () => { rightbar.dataset.display = (rightbar.dataset.display == "normal") ? "close" : "normal"; };
 }
 configs();
-
-
-
-

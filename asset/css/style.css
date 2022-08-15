@@ -31,6 +31,11 @@ Rules for writing CSS
     background-color: var(--bs-danger);
 }
 
+body,
+#body-wrapper{
+    overscroll-behavior: none!important;
+}
+
 #body-wrapper {
     min-height: 100vh;
     max-height: 100vh;
@@ -44,7 +49,6 @@ Rules for writing CSS
 /* //////////// */
 #left-bar {
     height: auto;
-    overscroll-behavior-y: contain;
 }
 
 #left-bar>div:nth-child(1) {

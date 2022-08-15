@@ -55,7 +55,7 @@
                 display : expand, normal
             -->
             <section id="content" class="overflow-auto bg-light-1 d-flex flex-column h-100 position-relative top-0 start-0 w-100" data-display="normal">
-                <?php include "./pages/login.php" ?>
+                <?php include "./pages/product_list.php" ?>
             </section>
             <!-- CONTENT END -->
         </section>
@@ -67,6 +67,7 @@
 
     <!-- CUSTOM JS -->
     <script src="asset/js/main.js"></script>
+    <script src="asset/js/swipe.js"></script>
 
     <!-- BOOTSTRAP JS -->
     <!-- cdn -->
