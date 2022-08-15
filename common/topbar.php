@@ -1,8 +1,10 @@
 <!-- Left Bar Close Toggle -->
-<button id="toggle-lb-display-close" class="btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white position-relative tb-item">
-    <i class="fas fa-bars fa-lg"></i>
-    <i class="fas fa-slash fa-2x position-absolute top-50 start-50 translate-middle text-light"></i>
-</button>
+<div class="top-0 h-100">
+    <button id="toggle-lb-display-close" class="h-100 btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white position-relative tb-item">
+        <i class="fas fa-bars fa-lg"></i>
+        <i class="fas fa-slash fa-2x position-absolute top-50 start-50 translate-middle text-light"></i>
+    </button>
+</div>
 <!-- Message Dropdown -->
 <div tabindex="0" class="ms-auto btn btn-outline-primary border-0 rounded-0 px-3 d-flex align-items-center text-white position-relative tb-item">
     <!-- icon -->

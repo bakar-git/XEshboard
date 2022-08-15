@@ -2,10 +2,6 @@
     <div class="py-2">
         <span class="h2 mb-0 text-black-50 ">Dashboard</span>
     </div>
-    <button class="ms-3 rounded-0 btn btn-primary px-3">
-        <i class="fas fa-plus-square me-1"></i>
-        <span class="d-none d-md-inline">Create New</span>
-    </button>
     <!-- Search Bar -->
     <div id="content-in-search" class="ms-auto d-flex align-items-stretch">
         <button class="btn btn-outline-secondary border-0 px-3 my-2">
@@ -30,3 +26,8 @@
         <i class="fas fa-gear"></i>
     </button>
 </div>
+<!-- Create -->
+<button class="position-absolute bottom-0 end-0 translate-middle shadow btn btn-primary p-2" style="z-index: 10;">
+    <i class="fas fa-plus-square me-1"></i>
+    <span class="d-none d-md-inline">Create New</span>
+</button>

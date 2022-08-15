@@ -1,0 +1,27 @@
+{
+    "name": "XEshboard",
+    "short_name": "XE",
+    "description": "Lightweight performant dashboard",
+    "icons": [
+      {
+        "src": "asset/image/app/svg-512x512.svg",
+        "type": "image/svg+xml",
+        "sizes": "512x512"
+      },
+      {
+        "src": "asset/image/app/png-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "asset/image/app/png-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "./",
+    "background_color": "#30363c",
+    "display": "standalone",
+    "scope": "./",
+    "theme_color": "#30363c"
+  }

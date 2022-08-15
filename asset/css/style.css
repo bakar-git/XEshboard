@@ -47,6 +47,7 @@ Rules for writing CSS
 /* //////////// */
 #left-bar {
     height: auto;
+    overscroll-behavior-y: contain;
 }
 
 #left-bar>div:nth-child(1) {
@@ -223,13 +224,31 @@ Rules for writing CSS
     background-color: var(--bs-primary)!important;
 }
 #left-bar[data-interaction='mouse'] #left-bar-in>#lb-config-panel > #toggle-lb-display-compact,
-#left-bar[data-interaction='mouse'] + section > #top-bar > #toggle-lb-display-close{
+#left-bar[data-interaction='mouse'] + section > #top-bar #toggle-lb-display-close{
     pointer-events: none;
     cursor: not-allowed;
 }
 #left-bar[data-interaction='mouse'] #left-bar-in>#lb-config-panel > #toggle-lb-display-compact > i:nth-child(2),
-#left-bar[data-interaction='mouse'] + section > #top-bar > #toggle-lb-display-close > i:nth-child(2) {
+#left-bar[data-interaction='mouse'] + section > #top-bar #toggle-lb-display-close > i:nth-child(2) {
     display: block;
+}
+
+
+/* Topbar first button behaviour on left bar different modes */
+#left-bar[data-overlay='true'][data-display='normal'] + section > #top-bar > div:nth-child(1){
+    position: absolute;
+    left: 16rem;
+}
+#left-bar[data-overlay='true'][data-display='compact'] + section > #top-bar > div:nth-child(1){
+    position: absolute;
+    left: 4rem;
+}
+#left-bar[data-overlay='true'][data-display='close'] + section > #top-bar > div:nth-child(1){
+    position: absolute;
+    left: 0rem;
+}
+#left-bar[data-overlay='true'][data-display='normal'][data-interaction='mouse'] + section > #top-bar > div:nth-child(1){
+    position: static;
 }
 
 /* ///////////////////// */
@@ -346,15 +365,7 @@ Rules for writing CSS
 /* top bar media queries */
 /* ///////////////////// */
 
-@media (any-hover: none),
-(any-pointer: none) {
-    /* .tb-dropdown-menu {
-        position: fixed;
-        top: 3rem;
-        right: 50%;
-        box-shadow: 0px 1px 10px -2px black!important;
-        transform: translateX(50%);
-    } */
+@media (max-width : 767px) {
     .tb-dropdown-menu:not(:nth-child(3)){
         position: fixed;
         top: 3rem;
