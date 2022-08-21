@@ -37,7 +37,7 @@
     <!-- Left Bar bottom panel -->
     <div id="lb-bottom-icons" class="mt-auto border-top border-dark-n2 d-flex flex-column position-relative">
         <button class="btn btn-secondary py-2 text-white mt-auto rounded-0 d-none shadow-none"><i class="fas fa-arrow-right-to-bracket fa-sm"></i></button>
-        <div class="bg-dark-n1 d-flex w-100 justify-content-between px-2">
+        <div class="bg-dark-n1 d-flex w-100 justify-content-between px-3">
             <button class="btn btn-outline-info px-3 my-1 text-white"><i class="fas fa-gear fa-sm"></i></button>
             <button class="btn btn-outline-success px-3 my-1 text-white"><i class="fas fa-expand fa-sm"></i></button>
             <button class="btn btn-outline-warning px-3 my-1 text-white"><i class="fas fa-lock fa-sm"></i></button>

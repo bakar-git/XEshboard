@@ -1,7 +1,7 @@
 <!-- Header -->
 <?php include "./common/page_header.php" ?>
 <!-- Body -->
-<div class="p-4 overflow-auto h-100" id="content-in">
+<div class="p-4 overflow-auto h-100 position-relative" id="content-in">
     <link rel="stylesheet" href="./asset/css/table.css">
     <div class="row">
         <div class="col-xl-3 col-sm-6 col-12">
@@ -163,6 +163,12 @@
                 name: 'Gender',
                 break_at: '800px',
                 editable : true,
+                func : (col)=>{
+                    console.log("here");
+                    col.oninput = (evt)=>{
+                        console.log("got input", evt);
+                    }
+                }
             },
             {
                 name: 'Email',
@@ -201,4 +207,6 @@
                 });
         })
     </script>
+    <!-- Right Bar -->
+    <?php include "./common/rightbar.php" ?>
 </div>

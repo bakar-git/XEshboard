@@ -101,34 +101,9 @@ export class Table {
         col_in.classList.add('td-in');
         col_in.innerHTML = col_data;
         col.appendChild(col_in);
-        if(editable) this._inline_editable(col);
+        if(editable) col.contentEditable = true;
         if(func != undefined) func(col);
         return col;
-    }
-    /**
-         * Make column editable
-         * @param {object} column 
-    */
-    _inline_editable(column){
-        column.ondblclick = ()=>{
-            let value = column.children[0].innerHTML;
-            column.children[0].innerHTML = "";
-            this.editor.value = value;
-            column.children[0].appendChild(this.editor);
-            this.editor.focus();
-            this.editor.onblur = ()=>{
-                column.children[0].removeChild(this.editor);
-                column.children[0].innerHTML = this.editor.value;
-                if(value != this.editor.value) {
-                    column.dispatchEvent(new CustomEvent(Table.col_change_event_name, {
-                        detail : {
-                            previous_value : value,
-                            new_value : this.editor.value
-                        }
-                    }));
-                }
-            }
-        }
     }
     /**
          * Make mediaQuery css for table columns

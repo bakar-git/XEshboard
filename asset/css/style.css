@@ -301,7 +301,7 @@ body,
     width: 16rem;
     will-change: width, opacity;
     transition: width 300ms, opacity 400ms;
-    z-index: 30;
+    z-index: 5;
 }
 
 /* ///////////////////// */
