@@ -19,11 +19,11 @@
 
     <!-- CUSTOM CSS -->
     <!-- local -->
-    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/style.css">
 
     <title>XEshboard</title>
     <!-- Icon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="asset/image/app/favicon.ico">
 
     <!-- Manifest File -->
     <link rel="manifest" href="manifest.json">
